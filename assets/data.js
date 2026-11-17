@@ -1,0 +1,369 @@
+/* =====================================================================
+   LOIS Lab — 사이트 콘텐츠 데이터
+   이 파일만 수정하면 프로젝트 / 구성원 / 대표논문이 갱신됩니다.
+   type: "dom" (국내), "intl" (국제)
+   ===================================================================== */
+
+const PROJECTS = [
+  { year: "2024–2027", type: "dom",
+    ko: "다중 모빌리티(드론, 자율주행차량, 실내모바일로봇 등) 기반 무인자율배송시스템 MaaS 플랫폼 기술 개발",
+    en: "MaaS Platform for Unmanned Autonomous Delivery Using Multiple Mobilities (Drones, Autonomous Vehicles, Indoor Mobile Robots)",
+    sponsor: { ko: "중소벤처기업부, 로비고스", en: "Ministry of SMEs and Startups, Rovigos" } },
+  { year: "2024", type: "dom",
+    ko: "소재부품장비 기업의 공급망 관리 현황 및 지원방안 연구",
+    en: "Supply Chain Management Practices of Materials, Parts and Equipment Firms and Policy Support",
+    sponsor: { ko: "산업통상자원부", en: "Ministry of Trade, Industry and Energy" } },
+  { year: "2024", type: "dom",
+    ko: "Core zone과 flex zone 클러스터 설정을 통한 라스트마일 배송 문제해결 전략 — 새벽배송 사례",
+    en: "Last-Mile Delivery Strategy Using Core-Zone and Flex-Zone Clustering: The Case of Early-Morning Delivery",
+    sponsor: { ko: "정석물류학술재단", en: "Jungseok Logistics Foundation" } },
+  { year: "2021", type: "dom",
+    ko: "컨테이너 적재시스템 최적화 엔진 개발",
+    en: "Optimization Engine for a Container Loading System",
+    sponsor: { ko: "유로지텍", en: "ULOGITECH Co., Ltd." } },
+  { year: "2020", type: "dom",
+    ko: "TMS 최적화 엔진 개발",
+    en: "Optimization Engine for a Transportation Management System (TMS)",
+    sponsor: { ko: "로비고스", en: "Rovigos" } },
+  { year: "2020", type: "dom",
+    ko: "선복 할당 최적화 시스템 개발",
+    en: "Vessel Space (Slot) Allocation Optimization System",
+    sponsor: { ko: "장금상선", en: "Sinokor Merchant Marine" } },
+  { year: "2020–2023", type: "dom",
+    ko: "대체연료 자동차 시장 및 충전인프라 확산을 위한 분석방법론",
+    en: "Analytical Methods for the Diffusion of Alternative-Fuel Vehicles and Charging Infrastructure",
+    sponsor: { ko: "한국연구재단", en: "National Research Foundation of Korea" } },
+  { year: "2020–2021", type: "dom",
+    ko: "산림화재 예방 및 대응을 위한 트럭·드론 하이브리드 감시 체계 최적화에 관한 연구",
+    en: "Optimizing Hybrid Truck–Drone Surveillance for Wildfire Prevention and Response",
+    sponsor: { ko: "한국연구재단", en: "National Research Foundation of Korea" } },
+  { year: "2018", type: "dom",
+    ko: "LG CNS 최적화 Task 산학협력 자문",
+    en: "Industry–Academia Advisory on Optimization Tasks for LG CNS",
+    sponsor: { ko: "LG CNS", en: "LG CNS" } },
+  { year: "2017–2020", type: "dom",
+    ko: "일대일로 환경하에서의 동아시아 물류네트워크의 재구성",
+    en: "Reconfiguring East Asian Logistics Networks under the Belt and Road Initiative",
+    sponsor: { ko: "한국연구재단", en: "National Research Foundation of Korea" } },
+  { year: "2017–2020", type: "dom",
+    ko: "드론을 활용한 혈액제제·소화물 운송시스템에 대한 수리모형 및 알고리즘 개발",
+    en: "Mathematical Models and Algorithms for Drone Transport of Blood Products and Small Parcels",
+    sponsor: { ko: "한국연구재단", en: "National Research Foundation of Korea" } },
+  { year: "2017–2019", type: "dom",
+    ko: "분해시스템 및 서비스부품 시스템에 대한 재고관리에 관한 연구",
+    en: "Inventory Management for Disassembly and Service-Parts Systems",
+    sponsor: { ko: "한국연구재단", en: "National Research Foundation of Korea" } },
+  { year: "2017", type: "dom",
+    ko: "철도컨테이너 터미널 내 갠트리 크레인 적하계획 수립에 관한 연구",
+    en: "Gantry Crane Loading Plans at Rail Container Terminals",
+    sponsor: { ko: "정석물류학술재단", en: "Jungseok Logistics Foundation" } },
+  { year: "2017", type: "dom",
+    ko: "트럭-드론 협동시스템을 활용한 산림화재 확산 방지 대응에 관한 연구",
+    en: "Truck–Drone Cooperative Systems for Containing Wildfire Spread",
+    sponsor: { ko: "정석물류통상연구원", en: "Jungseok Research Institute of International Logistics and Trade" } },
+  { year: "2016", type: "dom",
+    ko: "공급원의 다변화를 통한 배송효율성 향상에 관한 연구: 배합사료 회사를 중심으로",
+    en: "Improving Delivery Efficiency through Sourcing Diversification: A Compound Feed Company",
+    sponsor: { ko: "정석물류통상연구원", en: "Jungseok Research Institute of International Logistics and Trade" } },
+  { year: "2016", type: "dom",
+    ko: "용기포항 건설사업 예비타당성조사 내 편익추정",
+    en: "Benefit Estimation for the Yonggipo Port Construction Preliminary Feasibility Study",
+    sponsor: { ko: "한국개발연구원", en: "Korea Development Institute" } },
+  { year: "2015", type: "dom",
+    ko: "흑산도항 건설사업 예비타당성조사 내 편익추정",
+    en: "Benefit Estimation for the Heuksando Port Construction Preliminary Feasibility Study",
+    sponsor: { ko: "한국개발연구원", en: "Korea Development Institute" } },
+  { year: "2013–2014", type: "dom",
+    ko: "신재생에너지 금융환경 현황 분석과 제도개선 방안 연구",
+    en: "Financing Environment for Renewable Energy and Institutional Improvements",
+    sponsor: { ko: "에너지관리공단", en: "Korea Energy Management Corporation" } },
+  { year: "2013", type: "dom",
+    ko: "보령화력 3부두 건설사업 공공기관 예비타당성조사 내 수요·편익 추정",
+    en: "Demand and Benefit Estimation for the Boryeong Power Plant Pier 3 Feasibility Study",
+    sponsor: { ko: "한국개발연구원", en: "Korea Development Institute" } },
+  { year: "2013", type: "dom",
+    ko: "인천항 접근항로 준설의 경제적 타당성 분석",
+    en: "Economic Feasibility of Dredging the Incheon Port Approach Channel",
+    sponsor: { ko: "인천지방해양항만청", en: "Incheon Regional Office of Oceans and Fisheries" } },
+  { year: "2013", type: "dom",
+    ko: "중소기업 온실가스 감축에 관한 인식제고 방안",
+    en: "Raising Awareness of Greenhouse Gas Reduction among SMEs",
+    sponsor: { ko: "한국그린비즈니스협회", en: "Korea Green Business Association" } },
+  { year: "2012–2013", type: "dom",
+    ko: "수도권 컨테이너 물동량 분석과 물동량 전환에 따른 효과 및 타당성 조사",
+    en: "Container Volume Analysis for the Seoul Metropolitan Area and the Effects of Cargo Shift",
+    sponsor: { ko: "인천항만공사", en: "Incheon Port Authority" } },
+  { year: "2012–2014", type: "dom",
+    ko: "녹색해운을 위한 선박속력, 급유항, 선박대수 결정에 관한 연구",
+    en: "Ship Speed, Bunkering Port and Fleet Size Decisions for Green Shipping",
+    sponsor: { ko: "한국연구재단", en: "National Research Foundation of Korea" } },
+  { year: "2011–2013", type: "intl",
+    ko: "Sustainable Intermodal Transportation Network Using Short Sea Shipping (Phase 2)",
+    en: "Sustainable Intermodal Transportation Network Using Short Sea Shipping (Phase 2)",
+    sponsor: { ko: "아시아태평양경제협력체(APEC)", en: "Asia-Pacific Economic Cooperation (APEC)" } },
+  { year: "2010–2011", type: "intl",
+    ko: "Forecasting Short Sea Shipping Volume in South Africa (Phase 2)",
+    en: "Forecasting Short Sea Shipping Volume in South Africa (Phase 2)",
+    sponsor: { ko: "Transnet Port Terminals, 남아공", en: "Transnet Port Terminals, South Africa" } },
+  { year: "2008–2009", type: "intl",
+    ko: "Forecasting Short Sea Shipping Volume for Selecting a Hub Port in South Africa (Phase 1)",
+    en: "Forecasting Short Sea Shipping Volume for Selecting a Hub Port in South Africa (Phase 1)",
+    sponsor: { ko: "Transnet Port Terminals, 남아공", en: "Transnet Port Terminals, South Africa" } },
+  { year: "2007–2008", type: "dom",
+    ko: "현대상선 공컨테이너 재배치 정보시스템 개발",
+    en: "Empty Container Repositioning Information System",
+    sponsor: { ko: "현대상선", en: "Hyundai Merchant Marine" } },
+  { year: "2006–2007", type: "intl",
+    ko: "Short Sea Shipping Study: Successful SSS Models for Port Efficiency and Security with Less Congestion, Fuel Cost and Pollution",
+    en: "Short Sea Shipping Study: Successful SSS Models for Port Efficiency and Security with Less Congestion, Fuel Cost and Pollution",
+    sponsor: { ko: "아시아태평양경제협력체(APEC)", en: "Asia-Pacific Economic Cooperation (APEC)" } },
+  { year: "2002–2005", type: "intl",
+    ko: "Planning and Scheduling in Remanufacturing Systems",
+    en: "Planning and Scheduling in Remanufacturing Systems",
+    sponsor: { ko: "스위스 국립과학재단", en: "Swiss National Science Foundation" } },
+  { year: "2000–2001", type: "dom",
+    ko: "Intelligent Planning and Scheduling System 개발",
+    en: "Intelligent Planning and Scheduling System",
+    sponsor: { ko: "LG전자 DMC 사업부", en: "LG Electronics, Digital Micro Circuit Division" } },
+];
+
+/* ---------------------------------------------------------------------
+   학생 명단 (구성원 페이지의 박사과정 / 석사과정에 자동 표시)
+   degree: "phd" (박사과정) 또는 "ms" (석사과정)
+   topic(연구분야), email(스팸 수집 방지를 위해 { user: "아이디", domain: "gmail.com" }처럼 @ 앞뒤를 나눠 적음), scholar(Google Scholar 주소), photo(사진), since(입학 연도)를 적을 수 있습니다.
+   파트타임 학생은 parttime: true 와 affiliation(현재 소속)을 추가하세요.
+     예: parttime: true, affiliation: { ko: "○○물류 SCM팀 차장", en: "Manager, SCM Team, ○○ Logistics" }
+     소속 회사 링크는 affiliationUrl: "https://..." 로 추가합니다.
+   사진이 없으면 이름 머리글자가 표시됩니다.
+   예시:
+   { degree: "phd", name: { ko: "홍길동", en: "Gildong Hong" }, since: "2023",
+     topic: { ko: "드론-트럭 협업 배송 경로 최적화", en: "Truck–drone delivery routing" },
+     email: { user: "gildong", domain: "inha.edu" }, photo: "assets/people/hong.jpg" },
+   --------------------------------------------------------------------- */
+const MEMBERS = [
+  { degree: "phd", name: { ko: "장진명", en: "Jin-Myeong Jang" },
+    topic: { ko: "Operations Research / Logistics Optimization / Supply Chain Management / Last-mile Delivery / Drone Logistics", en: "Operations Research / Logistics Optimization / Supply Chain Management / Last-mile Delivery / Drone Logistics" },
+    email: { user: "heuristics.jang", domain: "gmail.com" },
+    photo: "assets/people/jang-jinmyeong.jpg",
+    scholar: "https://scholar.google.com/citations?hl=ko&user=kXlk2yvM834C" },
+  { degree: "phd", name: { ko: "Hangyu Mei", en: "Hangyu Mei" },
+    topic: { ko: "Operations Research / Logistics Optimization / Heuristic Algorithms / Multi-Objective Optimization / Simulation", en: "Operations Research / Logistics Optimization / Heuristic Algorithms / Multi-Objective Optimization / Simulation" },
+    email: { user: "teddymay", domain: "inha.edu" },
+    photo: "assets/people/mei-hangyu.jpg",
+    scholar: "https://scholar.google.com/citations?user=xf6aC1YAAAAJ&hl=ko" },
+  { degree: "phd", name: { ko: "김성웅", en: "Sung-Woong Kim" }, parttime: true,
+    affiliation: { ko: "유로지텍 대표", en: "CEO, ULOGITECH Co., Ltd." },
+    affiliationUrl: "https://www.ulogitech.com/",
+    photo: "assets/people/kim-sungwoong.jpg",
+    topic: { ko: "물류IT", en: "Logistics IT" },
+    email: { user: "etwas1004", domain: "gmail.com" } },
+  { degree: "phd", name: { ko: "김경득", en: "Kyung-Deuk Kim" }, parttime: true,
+    affiliation: { ko: "Dole Korea 매니저", en: "Manager, Dole Korea" },
+    photo: "assets/people/kim-kyungdeuk.jpg",
+    topic: { ko: "신선물류", en: "Fresh / Cold-Chain Logistics" },
+    email: { user: "hoozue", domain: "naver.com" } },
+  { degree: "ms",  name: { ko: "Xinran Sun", en: "Xinran Sun" },
+    topic: { ko: "Logistics Simulation / Optimization", en: "Logistics Simulation / Optimization" },
+    email: { user: "sxr010314", domain: "163.com" },
+    photo: "assets/people/sun-xinran.jpg" },
+  { degree: "ms",  name: { ko: "김덕현", en: "Deok-Hyeon Kim" },
+    topic: { ko: "Logistics Optimization", en: "Logistics Optimization" },
+    email: { user: "dukhyun1591", domain: "gmail.com" },
+    photo: "assets/people/kim-dukhyun.jpg" },
+];
+
+
+/* ---------------------------------------------------------------------
+   논문 목록 (Google Scholar 프로필 기준, 2026-11-13 수집, 총 60편)
+   새 논문은 맨 위에 추가하세요. 연도별로 자동 묶여 표시됩니다.
+   형식: { y: 연도, a: "저자", t: "제목", v: "학술지, 권(호), 쪽", s: "Scholar 인용 ID" }
+   s 는 Google Scholar 논문 상세 페이지 링크용 ID (없으면 링크 없이 표시)
+   --------------------------------------------------------------------- */
+const SCHOLAR_USER = "g1k5hDsAAAAJ";
+const PUBLICATIONS = [
+  { y: 2026, a: "JM Jang, DH Son, HJ Kim", t: "Lagrangian Decomposition Heuristic for an Inventory and Distribution Planning Problem with Unmanned Aerial Vehicles in a Blood Supply Chain", v: "Journal of the Operational Research Society (published online)", s: "u9iWguZQMMsC" },
+  { y: 2026, a: "P Chhetri, S Shahparvari, I Rouzbeh, PTW Lee, HJ Kim", t: "A Freight Transit Network Model to Optimize Seaport Access for the Landlocked Nation Nepal", v: "Transport Policy 188, 104332", s: "XiSMed-E-HIC" },
+  { y: 2026, a: "JM Jang, HJ Kim", t: "Shipper-Centric Short-Term Vehicle Capacity Requirement Planning for First-Mile Bulk-Commodity Delivery", v: "Expert Systems With Applications 312, 131531", s: "OU6Ihb5iCvQC" },
+  { y: 2026, a: "JM Jang, H Mei, HJ Kim", t: "Balancing Driver Workloads through Two-Stage Service Area Assignment in Last-Mile Delivery", v: "International Journal of Industrial Engineering: Theory, Applications and Practice 33(1), 160–188", s: "p2g8aNsByqUC" },
+  { y: 2025, a: "PTW Lee, YJ Kim, HJ Kim, X Feng, P Chhetri", t: "Global Logistics Distribution Centres and Infrastructures in the E-Commerce Era", v: "International Journal of Logistics Research and Applications 28(9), 997–1001", s: "1sJd4Hv_s6UC" },
+  { y: 2025, a: "DH Son, HJ Kim, KT Kim", t: "Inventory Control Models for Disassembly Systems with Lost Sales", v: "International Journal of Production Economics 290, 109773", s: "uWQEDVKXjbEC" },
+  { y: 2025, a: "DH Son, HJ Kim", t: "A Genetic Algorithm for Collaborative Truck-Drone Routing and Scheduling Problem in Surveillance Operations", v: "International Journal of Industrial Engineering: Theory, Applications and Practice 32(3), 809–821", s: "SP6oXDckpogC" },
+  { y: 2024, a: "HJ Kim, TY Kim, OK Kwon", t: "Network Design of a Last-Mile Parcel Delivery System Based on Drone Lockers", v: "Korean Journal of Logistics 32(5), 43–55", s: "P5F9QuxV20EC" },
+  { y: 2024, a: "KT Kim, JM Jang, DH Son, HJ Kim", t: "SKU Selection and Zone Allocation Based on a Simultaneous Picking Strategy in Digital Picking Systems", v: "Korean Journal of Logistics 31(1), 43–55", s: "nb7KW1ujOQ8C" },
+  { y: 2023, a: "JM Jang, JC Kim, HJ Kim, KT Kim", t: "Predicting Forest Fires Using Machine Learning Considering Human Factors", v: "Journal of Korea Society of Industrial Information Systems 28(5), 109–126", s: "dshw04ExmUIC" },
+  { y: 2023, a: "DH Son, KT Kim, HJ Kim", t: "Shipment and Charter Planning: A Case of a Korean Oil Refining Company", v: "International Journal of Shipping and Transport Logistics 17(3), 257–280", s: "KxtntwgDAa4C" },
+  { y: 2022, a: "DH Son, SB An, HJ Kim, JM Jang", t: "Push and Pull Disassembly Quantity Models in a Reverse Supply Chain: The Case of an Automobile Disassembly System in Korea", v: "International Journal of Logistics Research and Applications 25(9), 1287–1312", s: "HoB7MX3m0LUC" },
+  { y: 2021, a: "J Yoo, JY Lee, HJ Kim", t: "US-China Competition from a Perspective of Global Product Network: Trends and Implications of Industrial Competitiveness between Countries Using Product Space Model", v: "Journal of International Logistics and Trade 19(4), 197–210", s: "CHSYGLWDkRkC" },
+  { y: 2021, a: "K Kim, HJ Kim, JM Jang, JC Kim", t: "Comparative Analysis on the Efficiency of Logistics Centers by Military Logistics Hierarchy: Focusing on Army Logistics Hierarchy", v: "Korean Journal of Logistics 29(5), 71–80", s: "UxriW0iASnsC" },
+  { y: 2021, a: "JM Jang, HJ Kim, DH Son", t: "A Heuristic for Drone-Utilized Blood Inventory and Delivery Planning", v: "Journal of Society of Korea Industrial and Systems Engineering 44(3), 106–116", s: "NhqRSupF_l8C" },
+  { y: 2021, a: "DH Son, YS Gang, HJ Kim", t: "Analysis on the Efficiency Change in Electric Vehicle Charging Stations Using Multi-Period Data Envelopment Analysis", v: "Journal of Society of Korea Industrial and Systems Engineering 44(2), 1–14", s: "EUQCXRtRnyEC" },
+  { y: 2021, a: "JM Jang, HJ Kim, DH Son, DH Lee", t: "A Heuristic for Service-Parts Lot-Sizing with Disassembly Option", v: "Journal of Society of Korea Industrial and Systems Engineering 44(2), 24–35", s: "bFI3QPDXJZMC" },
+  { y: 2021, a: "JM Jang, DH Son, HJ Kim", t: "Effects Analysis of the Drone-Utilized Blood Transportation System", v: "Korean Journal of Logistics 29(3), 57–68", s: "b0M2c_1WBrUC" },
+  { y: 2020, a: "HM Chung, OK Kwon, OS Han, HJ Kim", t: "Evolving Network Characteristics of the Asian International Aviation Market: A Weighted Network Approach", v: "Transport Policy 99, 299–313", s: "NMxIlDl6LWMC" },
+  { y: 2020, a: "DH Son, YS Gang, HJ Kim", t: "Evaluation of Operational Efficiency for Electric Vehicle Charging Stations Using Data Envelopment Analysis", v: "Journal of Society of Korea Industrial and Systems Engineering 43(3), 53–60", s: "yD5IFk8b50cC" },
+  { y: 2019, a: "K Kim, DH Son, HJ Kim", t: "Efficiency Analysis of Logistics Centers Dedicated to Retail Type: A Case of a Korean Distribution Company", v: "Journal of International Logistics and Trade 17(1), 33–41", s: "ldfaerwXgEUC" },
+  { y: 2019, a: "DH Son, HJ Kim", t: "Heuristics for Rich Vehicle Routing Problem: A Case of a Korean Mixed Feed Company", v: "Journal of Society of Korea Industrial and Systems Engineering 42(1), 8–20", s: "3s1wT3WcHBgC" },
+  { y: 2019, a: "HJ Kim, DH Son, W Yang, JG Kim", t: "Liner Ship Routing with Speed and Fleet Size Optimization", v: "KSCE Journal of Civil Engineering 23(3), 1341–1350", s: "RHpTSmoSYBkC" },
+  { y: 2018, a: "KT Kim, HJ Kim, DH Son, JM Jang, HJ Kim", t: "Crane Scheduling Considering Tenant Service Time in a Rail-Road Transshipment Yard: Case of the Uiwang ICD", v: "Journal of Society of Korea Industrial and Systems Engineering 41(4), 238–247", s: "a0OBvERweLwC" },
+  { y: 2018, a: "OS Kwon, W Yang, HJ Kim, DH Son", t: "A Problem of Locating Electric Vehicle Charging Stations for Load Balancing", v: "Journal of Society of Korea Industrial and Systems Engineering 41(4), 9–21", s: "2P1L_qKh6hAC" },
+  { y: 2018, a: "HJ Kim, JSL Lam, PTW Lee", t: "Analysis of Liner Shipping Networks and Transshipment Flows of Potential Hub Ports in Sub-Saharan Africa", v: "Transport Policy 69, 193–206", s: "lSLTfruPkqcC" },
+  { y: 2017, a: "SY Lee, H Lim, HJ Kim", t: "Forecasting Container Port Volume: Implications for Dredging", v: "Maritime Economics & Logistics 19(2), 296–314", s: "maZDTaKrznsC" },
+  { y: 2017, a: "JY Lee, HJ Kim", t: "One Belt One Road Initiative and Its Implications for the Global Economy", v: "Journal of International Logistics and Trade 15(1), 8–9", s: "M3NEmzRMIkIC" },
+  { y: 2017, a: "KT Kim, HJ Kim, SH Choi", t: "Heuristic Algorithms for Assigning Ship Assembly Blocks to Storage Locations at a Shipyard", v: "Journal of International Logistics and Trade 15(3), 83–90", s: "D03iK_w7-QYC" },
+  { y: 2016, a: "HJ Kim, J Kim, W Yang, KY Lee, OS Kwon", t: "Effects of Truck-Shared Delivery: A Case of a Korean Mixed Feed Company", v: "Journal of International Logistics and Trade 14(2), 165–173", s: "k_IJM867U9cC" },
+  { y: 2016, a: "SW Kim, HJ Kim, DH Son, KY Lee", t: "A Case Study on a 3PL-Driven VMI Service", v: "Korean Journal of Logistics 24(3), 109–122", s: "pyW8ca7W8N0C" },
+  { y: 2016, a: "HJ Kim, JG Kim", t: "A Heuristic Algorithm for a Ship Speed and Bunkering Decision Problem", v: "Journal of Korean Society of Industrial and Systems Engineering 39(2), 19–27", s: "dfsIfKJdRG4C" },
+  { y: 2016, a: "DH Son, HJ Kim", t: "An Algorithm for the Loading Planning of Air Express Cargoes", v: "Journal of Korean Society of Industrial and Systems Engineering 39(3), 56–63", s: "O3NaXMp0MMsC" },
+  { y: 2016, a: "JG Kim, HJ Kim, HB Jun, CM Kim", t: "Optimizing Ship Speed to Minimize Total Fuel Consumption with Multiple Time Windows", v: "Mathematical Problems in Engineering 2016, 3130291", s: "e5wmG9Sq2KIC" },
+  { y: 2014, a: "JG Kim, HJ Kim, PTW Lee", t: "Optimizing Ship Speed to Minimize Fuel Consumption", v: "Transportation Letters 6(3), 109–117", s: "_Qo2XoVZTnwC" },
+  { y: 2014, a: "SK Lim, JG Kim, HJ Kim", t: "Simultaneous Order-Lot Pegging and Wafer Release Planning for Semiconductor Wafer Fabrication Facilities", v: "International Journal of Production Research 52(12), 3710–3724", s: "NaGl4SEjCO4C" },
+  { y: 2014, a: "HJ Kim", t: "A Lagrangian Heuristic for Determining the Speed and Bunkering Port of a Ship", v: "Journal of the Operational Research Society 65(5), 747–754", s: "BqipwSGYUEgC" },
+  { y: 2014, a: "HJ Kim, YT Chang", t: "Analysis of an Intermodal Transportation Network in Korea from an Environmental Perspective", v: "Transportation Journal 53(1), 79–106", s: "4OULZ7Gr8RgC" },
+  { y: 2013, a: "JG Kim, HJ Kim, PTW Lee", t: "Optimising Containership Speed and Fleet Size under a Carbon Tax and an Emission Trading Scheme", v: "International Journal of Shipping and Transport Logistics 5(6), 571–590", s: "R3hNpaxXUhUC" },
+  { y: 2012, a: "HJ Kim, YT Chang, KT Kim, HJ Kim", t: "An Epsilon-Optimal Algorithm Considering Greenhouse Gas Emissions for the Management of a Ship’s Bunker Fuel", v: "Transportation Research Part D: Transport and Environment 17(2), 97–103", s: "vV6vV6tmYwMC" },
+  { y: 2011, a: "HD Ahn, DH Lee, HJ Kim", t: "Solution Algorithms for Dynamic Lot-Sizing in Remanufacturing Systems", v: "International Journal of Production Research 49(22), 6729–6748", s: "blknAaTinKkC" },
+  { y: 2011, a: "Y Zhang, OK Kwon, HJ Kim", t: "Selecting a Location for a City Logistics Facility: A Fuzzy Synthetic Evaluation Method", v: "Journal of International Logistics and Trade 9(1), 115–132", s: "J_g5lzvAfSwC" },
+  { y: 2011, a: "SH Choi, HJ Kim, KT Kim", t: "Optimizing Empty Container Repositioning at a Global Maritime Company", v: "IE Interfaces 24(2), 164–172", s: "f2IySw72cVMC" },
+  { y: 2011, a: "HJ Kim, SW Seo, M Park, JJ Han", t: "An Air Container Loading Planning Model: DHL and Air Hong Kong Case", v: "Journal of International Logistics and Trade 9(1), 43–69", s: "g5m5HwL7SMYC" },
+  { y: 2011, a: "HJ Kim, JG Kim", t: "Determining Economic Ship Speeds and Fleet Sizes Considering Greenhouse Gas Emissions", v: "Journal of Society of Korea Industrial and Systems Engineering 34(2), 49–59", s: "r0BpntZqJG4C" },
+  { y: 2010, a: "HJ Kim, P Xirouchakis", t: "Capacitated Disassembly Scheduling with Random Demand", v: "International Journal of Production Research 48(23), 7177–7194", s: "GnPB-g6toBAC" },
+  { y: 2010, a: "HJ Kim, EK Yu, KT Kim, TS Kim", t: "Dynamic Lot Sizing with Minimum Order Size and Lost Sales", v: "Journal of International Logistics and Trade 8(1), 41–55", s: "zA6iFVUQeVQC" },
+  { y: 2010, a: "YT Chang, PTW Lee, HJ Kim, SH Shin", t: "Optimization Model for Transportation of Container Cargoes Considering Short Sea Shipping and External Cost: South Korean Case", v: "Transportation Research Record 2166(1), 99–108", s: "pqnbT2bcN3wC" },
+  { y: 2009, a: "HJ Kim, DH Lee, P Xirouchakis, OK Kwon", t: "A Branch and Bound Algorithm for Disassembly Scheduling with Assembly Product Structure", v: "Journal of the Operational Research Society 60(3), 419–430", s: "JV2RwH3_ST0C" },
+  { y: 2008, a: "HJ Kim, DH Lee, P Xirouchakis", t: "An Exact Algorithm for Two-Level Disassembly Scheduling", v: "Journal of the Korean Institute of Industrial Engineers 34(4), 414–424", s: "bEWYMUwI8FkC" },
+  { y: 2008, a: "HJ Kim, YT Chang, PTW Lee, SH Shin, MJ Kim", t: "Optimizing the Transportation of International Container Cargoes in Korea", v: "Maritime Policy & Management 35(1), 103–122", s: "HDshCWvjkbEC" },
+  { y: 2008, a: "DH Lee, HJ Kim, JS Kim", t: "Reverse Logistics: Research Issues and Literature Review", v: "Journal of the Korean Institute of Industrial Engineers 34(3), 270–288", s: "fPk4N6BV_jEC" },
+  { y: 2007, a: "HJ Kim, DH Lee, P Xirouchakis", t: "Disassembly Scheduling: Literature Review and Future Research Directions", v: "International Journal of Production Research 45(18–19), 4465–4484", s: "TQgYirikUcIC" },
+  { y: 2006, a: "HJ Kim, DH Lee, P Xirouchakis", t: "A Lagrangean Heuristic Algorithm for Disassembly Scheduling with Capacity Constraints", v: "Journal of the Operational Research Society 57(10), 1231–1240", s: "u_35RYKgDlwC" },
+  { y: 2006, a: "JG Kim, HB Jeon, HJ Kim, DH Lee, P Xirouchakis", t: "Disassembly Scheduling with Capacity Constraints: Minimizing the Number of Products Disassembled", v: "Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture 220(9), 1473–1481", s: "ns9cj8rnVeAC" },
+  { y: 2006, a: "HB Jeon, JG Kim, HJ Kim, DH Lee", t: "A Two-Stage Heuristic for Disassembly Scheduling with Capacity Constraints", v: "Management Science and Financial Engineering 12(1), 95", s: "hMod-77fHWUC" },
+  { y: 2006, a: "HJ Kim, DH Lee, P Xirouchakis", t: "Two-Phase Heuristic for Disassembly Scheduling with Multiple Product Types and Parts Commonality", v: "International Journal of Production Research 44(1), 195–212", s: "cFHS6HbyZ2cC" },
+  { y: 2005, a: "HJ Kim, YD Kim, DH Lee", t: "Scheduling for an Arc-Welding Robot Considering Heat-Caused Distortion", v: "Journal of the Operational Research Society 56(1), 39–50", s: "ZHo1McVdvXMC" },
+  { y: 2004, a: "DH Lee, HJ Kim, G Choi, P Xirouchakis", t: "Disassembly Scheduling: Integer Programming Models", v: "Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture 218(10), 1357–1372", s: "abG-DnoFyZgC" },
+  { y: 2003, a: "HJ Kim, DH Lee, P Xirouchakis, R Züst", t: "Disassembly Scheduling with Multiple Product Types", v: "CIRP Annals 52(1), 403–406", s: "YFjsv_pBGBYC" },
+];
+
+/* ---------------------------------------------------------------------
+   연구 분야별 관련 논문 필터 (research.html 의 "관련 논문 보기" 링크)
+   terms 중 하나라도 제목·학술지에 들어 있으면 해당 분야로 표시됩니다.
+   한 논문이 여러 분야에 들어갈 수 있습니다.
+   --------------------------------------------------------------------- */
+const TOPICS = {
+  "network":   { ko: "물류 네트워크 및 공급망 최적화", en: "Logistics Network & Supply Chain Optimization",
+                 terms: ["network", "supply chain", "vehicle routing", "routing", "service area", "capacity requirement",
+                         "shipping", "ship speed", "ship's", "ship’s", "containership", "bunker", "container cargo",
+                         "empty container", "container port", "seaport", "hub port", "liner", "charter", "intermodal",
+                         "truck-shared", "vmi", "location", "charging stations", "logistics center", "distribution centre",
+                         "loading planning", "one belt", "aviation"] },
+  "mobility":  { ko: "자율 모빌리티 및 드론·로봇 협업 배송", en: "Autonomous Mobility & Drone-Robot Delivery",
+                 terms: ["drone", "unmanned aerial", "last-mile", "truck-drone", "surveillance", "parcel delivery", "forest fire"] },
+  "warehouse": { ko: "스마트 물류 자동화 및 순환 공급망", en: "Smart Logistics Automation & Circular Supply Chains",
+                 terms: ["inventory", "disassembly", "lot-sizing", "lot sizing", "remanufactur", "reverse logistics",
+                         "picking", "crane", "storage location", "wafer", "arc-welding", "service-parts"] },
+};
+
+/* ---------------------------------------------------------------------
+   소식 (홈 화면에는 최신 3개, 소식 페이지에는 전체 표시)
+   새 소식은 맨 위에 추가하세요.
+   형식: { date: "2026-11-13" 또는 "2026", cat: "paper"(논문 게재) | "project"(프로젝트) | "award"(수상) | "event"(학회·행사) | "people"(구성원),
+           ko: "국문 제목", en: "English title", body: { ko: "", en: "" }, img: "assets/news/파일.jpg", link: "" }
+   논문 소식(cat: "paper")의 body 에는 논문 영문 제목을 적으세요. 언어 설정과 관계없이 항상 영어로 표시됩니다.
+   img, body, link 는 생략 가능합니다.
+   --------------------------------------------------------------------- */
+const NEWS_CATS = {
+  paper:   { ko: "논문", en: "Paper" },
+  project: { ko: "프로젝트", en: "Project" },
+  award:   { ko: "수상", en: "Award" },
+  event:   { ko: "학회·행사", en: "Conference & Event" },
+  people:  { ko: "구성원", en: "People" },
+};
+const NEWS = [
+  { date: "2026", cat: "paper",
+    ko: "Journal of the Operational Research Society 논문 온라인 게재",
+    en: "Paper published online in the Journal of the Operational Research Society",
+    body: { en: "Lagrangian Decomposition Heuristic for an Inventory and Distribution Planning Problem with Unmanned Aerial Vehicles in a Blood Supply Chain" },
+    link: "publications.html?topic=mobility" },
+  { date: "2026", cat: "paper",
+    ko: "Expert Systems With Applications 논문 게재",
+    en: "Paper published in Expert Systems With Applications",
+    body: { en: "Shipper-Centric Short-Term Vehicle Capacity Requirement Planning for First-Mile Bulk-Commodity Delivery" } },
+  { date: "2026", cat: "paper",
+    ko: "Transport Policy 논문 게재",
+    en: "Paper published in Transport Policy",
+    body: { en: "A Freight Transit Network Model to Optimize Seaport Access for the Landlocked Nation Nepal" } },
+  { date: "2025", cat: "paper",
+    ko: "International Journal of Production Economics 논문 게재",
+    en: "Paper published in the International Journal of Production Economics",
+    body: { en: "Inventory Control Models for Disassembly Systems with Lost Sales" } },
+];
+
+/* ---------------------------------------------------------------------
+   졸업생 (구성원 페이지 맨 아래 "졸업생" 섹션 — 비어 있으면 섹션이 숨겨집니다)
+   degree: "phd"(박사 졸업) 또는 "ms"(석사 졸업), year: 졸업연도
+   parttime: true(파트타임 과정 졸업 표시), thesis(학위논문 제목 {ko, en}), current(현재 소속·직위 {ko, en}), history(이전 경력 목록 {ko: [...], en: [...]}),
+   scholar(Google Scholar 주소), homepage(홈페이지 주소)는 생략 가능
+   예시:
+   { degree: "phd", year: 2024, name: { ko: "홍길동", en: "Gildong Hong" },
+     thesis: "Optimization Models for ...",
+     career: { ko: "현) ○○대학교 조교수 · 전) ○○연구원 선임연구원",
+               en: "Assistant Professor, ○○ University (formerly Senior Researcher, ○○ Institute)" },
+     scholar: "https://scholar.google.com/citations?user=...", homepage: "https://..." },
+   같은 과정 안에서는 졸업연도가 최근인 순서로 자동 정렬됩니다.
+   --------------------------------------------------------------------- */
+const ALUMNI = [
+  { degree: "phd", year: 2019, name: { ko: "김광욱", en: "Kwangwuk Kim" }, parttime: true,
+    thesis: { ko: "군 계층 및 유통업태별 물류센터 특성 비교분석: DEA분석을 중심으로",
+              en: "A Comparative Analysis on Logistics Center Characteristics of Military Echelon and Retail Type: With DEA Approach" },
+    current: { ko: "육군 중령", en: "Lieutenant Colonel, Republic of Korea Army" },
+    history: { ko: ["합동참모본부", "국군수송사령부", "지상작전사령부"],
+               en: ["Joint Chiefs of Staff", "Armed Forces Transportation Command", "Ground Operations Command"] } },
+  { degree: "ms", year: 2018, name: { ko: "손동훈", en: "Dong-Hoon Son" } },
+  { degree: "ms", year: 2014, name: { ko: "송영훈", en: "Young-Hoon Song" },
+    current: { ko: "PwC 컨설팅 Operation 본부 Senior Manager", en: "Senior Manager, Operations, PwC Consulting" },
+    history: { ko: ["쿠팡", "KPMG", "CJ대한통운", "한솔로지스틱스"],
+               en: ["Coupang", "KPMG", "CJ Logistics", "Hansol Logistics"] } },
+  { degree: "ms", name: { ko: "김광태", en: "Kwang-Tae Kim" },
+    current: { ko: "티엑스알로보틱스 상무보", en: "Associate Vice President, TXR Robotics" },
+    history: { ko: ["한국철도기술연구원", "한진물류연구원", "LG CNS", "원익로보틱스"],
+               en: ["Korea Railroad Research Institute", "Hanjin Logistics Research Institute", "LG CNS", "Wonik Robotics"] },
+    scholar: "https://scholar.google.com/citations?user=PhW4rJkAAAAJ" },
+];
+
+/* ---------------------------------------------------------------------
+   Working papers (논문 페이지의 "Working papers" 탭)
+   status: "review"(심사 중) / "submitted"(투고 완료) / "preparation"(준비 중)
+   journal 은 심사 중·투고 완료 논문에만 적습니다 (준비 중 논문의 목표 학술지는 공개하지 않음).
+   논문 상태가 바뀌면 status 를 고치고, 게재가 확정되면 PUBLICATIONS 로 옮기세요.
+   --------------------------------------------------------------------- */
+const WORKING_PAPERS_ASOF = { ko: "2026년 11월 기준", en: "As of November 2026" };
+const WORKING_PAPERS = [
+  { status: "review", note: { ko: "2차 수정본 제출", en: "2nd revision submitted" },
+    t: "Designing Collaborative Drone-Van Blood Distribution Networks for Emergency and Regular Demands",
+    a: "Jin-Myeong Jang, Dong-Hoon Son, Hangyu Mei, Hwa-Joong Kim", v: "Expert Systems With Applications" },
+
+  { status: "submitted",
+    t: "Experiential Trade-Offs in Order Picking: Physical Fatigue versus Cognitive Burden in a Fulfillment Center",
+    a: "Dong-Hoon Son, Jin-Seok Lee, Jin-Myeong Jang, Hwa-Joong Kim", v: "International Journal of Logistics Management" },
+  { status: "submitted",
+    t: "Consecutive Haul Scheduling with Discounted Rates for Middle-Mile Truckload Transportation",
+    a: "Jin-Myeong Jang, Hwa-Joong Kim", v: "Transportation Research Part E: Logistics and Transportation Review" },
+  { status: "submitted",
+    t: "Integrated Zone Assignment and Routing with Driver Preference for Early-Morning Last-Mile Delivery",
+    a: "Jin-Myeong Jang, Hwa-Joong Kim", v: "Computers & Industrial Engineering" },
+
+  { status: "preparation", t: "Simulation-Assisted Optimization for Human-Drone-Robot Collaborative Last-Mile Delivery in High-Rise Buildings", a: "Hangyu Mei, Hwa-Joong Kim" },
+  { status: "preparation", t: "Simulation-Based Optimization for Human-Drone-Robot Collaborative Delivery in a Single Community", a: "Hangyu Mei, Hwa-Joong Kim" },
+  { status: "preparation", t: "Parallel Matheuristic for Multi-Depot Heterogeneous Truck-Drone Routing Problem with Parking Lots", a: "Hangyu Mei, Jin-Myeong Jang, Xinran Sun, Dae-Eun Lim, Tae-Yong Kim, Hwa-Joong Kim" },
+  { status: "preparation", t: "Vehicle Loading Plan and Robotic Loading Sequence Optimization with Multi-Drop Unloading Precedence", a: "Hangyu Mei, Juchan Kim, Jin-Myeong Jang, Hwa-Joong Kim" },
+  { status: "preparation", t: "Vehicle Loading-Unloading-Reloading Planning", a: "Hangyu Mei, Jin-Myeong Jang, Hwa-Joong Kim" },
+  { status: "preparation", t: "Upstream Supply Chain Risk Management", a: "Jin-Myeong Jang, Junyeop Lee, Hwa-Joong Kim" },
+  { status: "preparation", t: "Shipper-Centric Short-Term Vehicle Capacity Requirement Planning with Binary Assignment", a: "Jin-Myeong Jang, Hangyu Mei, Hwa-Joong Kim" },
+  { status: "preparation", t: "Waste Collection Incentives and the Spatiotemporal Dynamics of Urban Walkability in Seoul", a: "Dong-Hoon Son, Hwa-Joong Kim" },
+  { status: "preparation", t: "Analysis of Regulated Charger-Sharing Markets: An Equilibrium Approach", a: "Dong-Hoon Son, Jin-Myeong Jang, Hwa-Joong Kim" },
+  { status: "preparation", t: "Equilibrium Analysis of Peer-to-Peer Autonomous Pricing Platforms in a Charger-Sharing Market", a: "Dong-Hoon Son, Hwa-Joong Kim" },
+  { status: "preparation", t: "Beyond the Contract: The Autonomy Paradox and Divergent Psychological Contracts in the Hybrid Logistics Workforce", a: "Dong-Hoon Son, Sunyong Kim, Hwa-Joong Kim" },
+  { status: "preparation", t: "Bi-Objective Crane Scheduling in a Rail-Road Transshipment Yard for Minimizing Makespan and In-Yard Truck Congestion", a: "Kwang-Tae Kim, Dong-Hoon Son, Jin-Myeong Jang, Hwa-Joong Kim" },
+  { status: "preparation", t: "Integrated SKU Selection and Zone Allocation for Simultaneous Picking in Digital Picking Systems with Workload Balancing", a: "Deok-Hyeon Kim, Jin-Myeong Jang, Kwang-Tae Kim, Dong-Hoon Son, Hwa-Joong Kim" },
+  { status: "preparation", t: "Wildfire Occurrence Prediction Model", a: "Jin-Myeong Jang, Hwa-Joong Kim" },
+  { status: "preparation", t: "Pareto Optimization for Delivery Assignment", a: "Jin-Myeong Jang, Hangyu Mei, Hwa-Joong Kim" },
+];

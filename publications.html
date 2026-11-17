@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko" data-lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>논문 · LOIS Lab</title>
+<meta name="title-en" content="Publications · LOIS Lab">
+<meta name="description" content="인하대학교 아태물류학부·물류전문대학원 Logistics Optimization & Intelligent Systems Lab (김화중 교수)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LOIS Lab">
+<meta property="og:title" content="Logistics Optimization &amp; Intelligent Systems Lab">
+<meta property="og:description" content="Inha University Graduate School of Logistics — Prof. Hwa-Joong Kim">
+<meta property="og:url" content="https://loislab-inha.github.io/publications.html">
+<meta property="og:image" content="https://loislab-inha.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logistics Optimization &amp; Intelligent Systems Lab, Inha University">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="publications">
+
+<a class="skip" href="#main"><span lang="ko">본문으로 건너뛰기</span><span lang="en">Skip to content</span></a>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="index.html" aria-label="LOIS Lab home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="3" width="10" height="10" rx="1.5"/><circle cx="25" cy="8" r="3"/><circle cx="24" cy="24" r="3"/><circle cx="8" cy="24" r="3"/><path d="M13 8h9M24.5 11v10M21 24H11"/></svg>
+      <span class="brand-text">LOIS Lab</span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="research.html"><span lang="ko">연구분야</span><span lang="en">Research area</span></a>
+      <a href="people.html"><span lang="ko">구성원</span><span lang="en">People</span></a>
+      <a href="publications.html" aria-current="page"><span lang="ko">논문</span><span lang="en">Publications</span></a>
+      <a href="projects.html"><span lang="ko">프로젝트</span><span lang="en">Projects</span></a>
+      <a href="news.html"><span lang="ko">소식</span><span lang="en">News</span></a>
+      <a href="join.html"><span lang="ko">지원 · 연락처</span><span lang="en">Join &amp; contact</span></a>
+    </nav>
+    <button class="lang-toggle" type="button" aria-label="Switch language / 언어 전환">
+      <span class="opt" data-for="ko">KO</span><span class="opt" data-for="en">EN</span>
+    </button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only"><span lang="ko">메뉴</span><span lang="en">Menu</span></span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <h1><span lang="ko">논문</span><span lang="en">Publications</span></h1>
+    <p class="page-intro"><span lang="ko">게재 논문과 진행 중인 논문입니다. 게재 논문의 제목을 누르면 Google Scholar의 상세 정보로 이동합니다.</span><span lang="en">Published papers and working papers. Select a published title to open its Google Scholar record.</span></p>
+  </div>
+</section>
+<section class="section section-first">
+  <div class="wrap">
+
+
+    <div class="tabs" role="tablist" aria-label="Publications">
+      <button type="button" role="tab" class="tab" id="tab-published" aria-controls="pub-wrap" aria-selected="true"><span lang="ko">게재 논문</span><span lang="en">Published</span></button>
+      <button type="button" role="tab" class="tab" id="tab-working" aria-controls="working-panel" aria-selected="false" tabindex="-1"><span lang="ko">진행 중 논문</span><span lang="en">Working Papers</span></button>
+    </div>
+
+    <!-- 논문 목록: assets/data.js 의 PUBLICATIONS 배열에서 자동 생성됩니다 -->
+    <div id="pub-wrap" role="tabpanel" aria-labelledby="tab-published" hidden>
+      <div class="pub-tools">
+        <label class="pub-search">
+          <span class="sr-only"><span lang="ko">논문 검색</span><span lang="en">Search publications</span></span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>
+          <input id="pub-search" type="search" autocomplete="off">
+        </label>
+        <a class="pub-scholar" href="https://scholar.google.com/citations?user=g1k5hDsAAAAJ&amp;hl=ko" target="_blank" rel="noopener">
+          Google Scholar
+        </a>
+      </div>
+      <div id="pub-topic" class="pub-topic" hidden></div>
+      <ol id="pub-list" class="pubs"></ol>
+      <p id="pub-empty" class="pub-empty" hidden>
+        <span lang="ko">검색어와 일치하는 논문이 없습니다. 다른 단어로 검색해 보세요.</span>
+        <span lang="en">No publications match that search. Try a different word.</span>
+      </p>
+      <button type="button" class="btn btn-ghost more" id="pub-more" hidden><span lang="ko">이전 논문 모두 보기</span><span lang="en">Show all earlier publications</span></button>
+    </div>
+
+    <!-- Working papers: assets/data.js 의 WORKING_PAPERS 배열에서 자동 생성됩니다 -->
+    <div id="working-panel" role="tabpanel" aria-labelledby="tab-working" hidden>
+      <p class="wp-note"><span lang="ko">심사 중이거나 투고·준비 중인 논문입니다.</span><span lang="en">Papers under review, submitted or in preparation.</span> <span class="wp-asof" id="wp-asof"></span></p>
+      <div id="wp-groups"></div>
+    </div>
+    <noscript>
+      <a class="btn btn-primary" href="https://scholar.google.com/citations?user=g1k5hDsAAAAJ&amp;hl=ko">Google Scholar</a>
+    </noscript>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="foot-name">Logistics Optimization &amp; Intelligent Systems Lab</p>
+      <p>
+        <span lang="ko">인하대학교 물류전문대학원<br>인천광역시 미추홀구 인하로 100 (22212)</span>
+        <span lang="en">Graduate School of Logistics, Inha University<br>100 Inha-ro, Michuhol-gu, Incheon 22212, Republic of Korea</span>
+      </p>
+    </div>
+    <dl class="contact">
+      <dt>Email</dt><dd><a href="mailto:hwa-joong.kim@inha.ac.kr">hwa-joong.kim@inha.ac.kr</a></dd>
+      <dt>Tel</dt><dd><a href="tel:+82328608238">032-860-8238</a></dd>
+      <dt>Fax</dt><dd>032-860-8223</dd>
+    </dl>
+  </div>
+  <div class="wrap foot-base">
+    <p>© <span id="year">2026</span> LOIS Lab, Inha University</p>
+  </div>
+</footer>
+<script src="assets/data.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

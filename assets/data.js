@@ -404,6 +404,9 @@ const WORKING_PAPERS = [
   { status: "review", note: { ko: "2차 수정본 제출", en: "2nd revision submitted" },
     t: "Designing Collaborative Drone-Van Blood Distribution Networks for Emergency and Regular Demands",
     a: "JM Jang, DH Son, H Mei, HJ Kim", v: "Expert Systems With Applications" },
+  { status: "review",
+    t: "Integrated Zone Assignment and Routing with Driver Preference for Early-Morning Last-Mile Delivery",
+    a: "JM Jang, HJ Kim", v: "Computers & Industrial Engineering" },
 
   { status: "submitted",
     t: "Experiential Trade-Offs in Order Picking: Physical Fatigue versus Cognitive Burden in a Fulfillment Center",
@@ -411,9 +414,6 @@ const WORKING_PAPERS = [
   { status: "submitted",
     t: "Consecutive Haul Scheduling with Discounted Rates for Middle-Mile Truckload Transportation",
     a: "JM Jang, HJ Kim", v: "Transportation Research Part E: Logistics and Transportation Review" },
-  { status: "submitted",
-    t: "Integrated Zone Assignment and Routing with Driver Preference for Early-Morning Last-Mile Delivery",
-    a: "JM Jang, HJ Kim", v: "Computers & Industrial Engineering" },
 
   { status: "preparation", t: "Simulation-Assisted Optimization for Human-Drone-Robot Collaborative Last-Mile Delivery in High-Rise Buildings", a: "H Mei, HJ Kim" },
   { status: "preparation", t: "Simulation-Based Optimization for Human-Drone-Robot Collaborative Delivery in a Single Community", a: "H Mei, HJ Kim" },

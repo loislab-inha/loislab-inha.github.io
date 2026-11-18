@@ -278,6 +278,16 @@ const NEWS_CATS = {
   people:  { ko: "구성원", en: "People" },
 };
 const NEWS = [
+  { date: "2026", cat: "people",
+    ko: "Hangyu Mei, 2026년 2학기 박사과정 입학",
+    en: "Hangyu Mei joined the lab as a Ph.D. student in Fall 2026",
+    body: { ko: "석사과정을 마친 Hangyu Mei 학생이 2026년 2학기부터 LOIS Lab 박사과정에서 연구를 이어갑니다.",
+            en: "After completing the M.S. program, Hangyu Mei continues research in LOIS Lab as a Ph.D. student from Fall 2026." } },
+  { date: "2026", cat: "people",
+    ko: "김덕현, 2026년 1학기 석사과정 입학",
+    en: "Deok-Hyeon Kim joined the lab as an M.S. student in Spring 2026",
+    body: { ko: "김덕현 학생이 2026년 1학기부터 LOIS Lab 석사과정에서 연구를 시작했습니다.",
+            en: "Deok-Hyeon Kim started research in LOIS Lab as an M.S. student in Spring 2026." } },
   { date: "2026", cat: "paper",
     ko: "Journal of the Operational Research Society 논문 온라인 게재",
     en: "Paper published online in the Journal of the Operational Research Society",

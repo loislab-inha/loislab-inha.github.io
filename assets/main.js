@@ -311,10 +311,12 @@
     const homeNews = $("home-news"), newsList = $("news-list");
     if (homeNews) renderNews(homeNews, NEWS.slice(0, 3));
     if (newsList) renderNews(newsList, NEWS);
-    // 소식 페이지: 논문 게재 / 프로젝트 / 행사로 나누어 표시 (그 외 분류는 행사 아래에 함께 표시)
+    // 소식 페이지: 구성원 / 논문 게재 / 프로젝트 / 수상 / 학회·행사로 나누어 표시
+    // (분류가 없거나 정해진 분류가 아닌 소식만 학회·행사 아래에 표시)
+    const NEWS_KEYS = ["people", "paper", "project", "award", "event"];
     document.querySelectorAll("[data-news-cat]").forEach((ol) => {
       const cat = ol.dataset.newsCat;
-      const items = NEWS.filter((n) => n.cat === cat || (cat === "event" && !["paper", "project", "event"].includes(n.cat)));
+      const items = NEWS.filter((n) => n.cat === cat || (cat === "event" && !NEWS_KEYS.includes(n.cat)));
       renderNews(ol, items);
       ol.hidden = items.length === 0;
       const empty = document.querySelector(`[data-news-empty="${cat}"]`);
@@ -324,7 +326,7 @@
       const group = ol.closest(".news-group");
       if (group) group.dataset.count = String(items.length);
     });
-    // 소식 탭: 전체 / 논문 게재 / 프로젝트 / 행사 (전체에서는 소식이 없는 분류를 숨김)
+    // 소식 탭: 전체 / 구성원 / 논문 게재 / 프로젝트 / 수상 / 학회·행사 (전체에서는 소식이 없는 분류를 숨김)
     const newsChips = document.querySelectorAll("[data-news-filter]");
     const showNews = (f) => {
       newsChips.forEach((c) => { const on = c.dataset.newsFilter === f; c.classList.toggle("is-on", on); c.setAttribute("aria-pressed", String(on)); });

@@ -2,6 +2,13 @@
   const root = document.documentElement;
   root.classList.add("js");
   const $ = (id) => document.getElementById(id);
+  /* 교수 이메일(HTML의 js-mail): 파일에는 @ 없이 나눠 두고 화면에서만 합침(스팸 수집 방지) */
+  document.querySelectorAll("a.js-mail").forEach((a) => {
+    const addr = `${a.dataset.u}\u0040${a.dataset.d}`;
+    a.href = `mailto:${addr}${a.dataset.subject ? `?subject=${a.dataset.subject}` : ""}`;
+    if (a.dataset.show) a.textContent = addr;
+  });
+
   /* 이메일은 data.js에 user/domain으로 나눠 두고, 화면에서만 합쳐 보여줌(스팸 수집 방지) */
   const emailLink = (e) => {
     const addr = typeof e === "string" ? e : `${e.user}\u0040${e.domain}`;

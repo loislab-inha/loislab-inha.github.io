@@ -358,7 +358,7 @@ const ALUMNI = [
   { degree: "ms", year: 2010, name: { ko: "김광태", en: "Kwang-Tae Kim" },
     thesis: { ko: "조립블록의 저장위치 계획에 관한 연구", en: "Storage Location Planning of Assembly Blocks at Shipyard" },
     degreeAfter: { ko: "고려대학교 박사", en: "Ph.D., Korea University" },
-    current: { ko: "티엑스알로보틱스 상무보", en: "Associate Vice President, TXR Robotics" },
+    current: { ko: "티엑스알로보틱스 상무보", en: "Vice President, TXR Robotics" },
     history: { ko: ["한국철도기술연구원", "한진물류연구원", "LG CNS", "원익로보틱스"],
                en: ["Korea Railroad Research Institute", "Hanjin Logistics Research Institute", "LG CNS", "Wonik Robotics"] },
     scholar: "https://scholar.google.com/citations?user=PhW4rJkAAAAJ" },

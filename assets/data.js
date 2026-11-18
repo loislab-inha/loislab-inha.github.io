@@ -322,6 +322,11 @@ const ALUMNI = [
     history: { ko: ["합동참모본부", "국군수송사령부", "지상작전사령부"],
                en: ["Joint Chiefs of Staff", "Armed Forces Transportation Command", "Ground Operations Command"] } },
 
+  { degree: "ms", year: 2026, name: { ko: "Hangyu Mei", en: "Hangyu Mei" },
+    thesis: { ko: "고층 건물 환경에서 인간-로봇 협력 라스트마일 배송을 위한 시뮬레이션 지원 최적화 프레임워크",
+              en: "A Simulation-Assisted Optimization Framework for Human-Robot Synergistic Last-Mile Delivery in High-Rise Buildings" },
+    current: { ko: "LOIS Lab 박사과정", en: "Ph.D. Student, LOIS Lab" },
+    scholar: "https://scholar.google.com/citations?user=xf6aC1YAAAAJ" },
   { degree: "ms", year: 2025, name: { ko: "YuShun Jiang", en: "YuShun Jiang" },
     thesis: { ko: "다중 운송수단을 고려한 드론 스테이션 선정과 혈액 공급망의 확률적 최적화에 관한 연구",
               en: "Stochastic Optimization of Blood Supply Chains with Drone Station Selection Considering Multiple Transport Modes" },

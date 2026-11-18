@@ -330,7 +330,7 @@ const ALUMNI = [
   { degree: "ms", year: 2023, name: { ko: "김주찬", en: "Joochan Kim" },
     thesis: { ko: "배송트럭 적재계획과 로봇 적재순서 계획 최적화: 모형과 알고리즘",
               en: "Optimizing Box Loading Planning and Robot Loading Sequencing in a Delivery Truck: Models and Algorithms" },
-    current: { ko: "LG CNS Entrue 최적화컨설팅담당 MO서비스컨설팅팀 선임Consultant", en: "Senior Consultant, MO Service Consulting Team, Optimization Consulting, LG CNS Entrue" },
+    current: { ko: "LG CNS Entrue 최적화컨설팅담당 MO서비스컨설팅팀 선임 Consultant", en: "Senior Consultant, MO Service Consulting Team, Optimization Consulting, LG CNS Entrue" },
     history: { ko: ["CJ대한통운 데이터솔루션그룹 연구원"], en: ["Researcher, Data Solution Group, CJ Logistics"] } },
   { degree: "ms", year: 2018, name: { ko: "손동훈", en: "Dong-Hoon Son" },
     thesis: { ko: "산불감시를 위한 드론을 활용한 복수의 차량경로문제",

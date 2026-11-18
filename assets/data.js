@@ -332,6 +332,11 @@ const ALUMNI = [
               en: "Optimizing Box Loading Planning and Robot Loading Sequencing in a Delivery Truck: Models and Algorithms" },
     current: { ko: "LG CNS Entrue 최적화컨설팅담당 MO서비스컨설팅팀 선임 Consultant", en: "Senior Consultant, MO Service Consulting Team, Optimization Consulting, LG CNS Entrue" },
     history: { ko: ["CJ대한통운 데이터솔루션그룹 연구원"], en: ["Researcher, Data Solution Group, CJ Logistics"] } },
+  { degree: "ms", year: 2020, name: { ko: "장진명", en: "Jin-Myeong Jang" },
+    thesis: { ko: "드론 지원 혈액 재고 배송 계획을 위한 라그랑지안 휴리스틱",
+              en: "A Lagrangian Heuristic for Drone-Assisted Blood Inventory/Distribution Planning" },
+    current: { ko: "LOIS Lab 박사과정", en: "Ph.D. Student, LOIS Lab" },
+    scholar: "https://scholar.google.com/citations?user=kXlk2yvM834C" },
   { degree: "ms", year: 2018, name: { ko: "손동훈", en: "Dong-Hoon Son" },
     thesis: { ko: "산불감시를 위한 드론을 활용한 복수의 차량경로문제",
               en: "Multiple Vehicle Routing Problem with Drones for Wildfire Surveillance" },
@@ -355,6 +360,9 @@ const ALUMNI = [
     thesis: { ko: "유전 알고리즘을 활용한 철도화물터미널에서의 적재 및 하역 문제",
               en: "A Genetic Algorithm for Container Loading and Unloading Problem at a Rail Terminal" },
     current: { ko: "LG CNS 총괄 Consultant (SAP MM·PM 모듈)", en: "Principal Consultant (SAP MM·PM Modules), LG CNS" } },
+  { degree: "ms", year: 2011, name: { ko: "유미성", en: "Mi-Sung Yu" },
+    thesis: { ko: "선박 운항속력을 고려한 선박의 연료관리에 관한 연구",
+              en: "A Study on Ship Fuel Management with Ship Speed Consideration" } },
   { degree: "ms", year: 2010, name: { ko: "김광태", en: "Kwang-Tae Kim" },
     thesis: { ko: "조립블록의 저장위치 계획에 관한 연구", en: "Storage Location Planning of Assembly Blocks at Shipyard" },
     degreeAfter: { ko: "고려대학교 박사", en: "Ph.D., Korea University" },
@@ -362,6 +370,9 @@ const ALUMNI = [
     history: { ko: ["한국철도기술연구원", "한진물류연구원", "LG CNS", "원익로보틱스"],
                en: ["Korea Railroad Research Institute", "Hanjin Logistics Research Institute", "LG CNS", "Wonik Robotics"] },
     scholar: "https://scholar.google.com/citations?user=PhW4rJkAAAAJ" },
+  { degree: "ms", year: 2010, name: { ko: "유은경", en: "Eun-Kyung Yu" },
+    thesis: { ko: "Dynamic Lot Sizing with Minimum Order Size and Lost Sales",
+              en: "Dynamic Lot Sizing with Minimum Order Size and Lost Sales" } },
 ];
 
 /* ---------------------------------------------------------------------

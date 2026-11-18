@@ -194,7 +194,7 @@ html[data-lang="ko"] .lede { max-width: 30em; }
 .pub-t a { text-decoration: none; }
 .pub-t a:hover { text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .pub-a { color: var(--ink-2); font-size: 15px; margin-top: 2px !important; }
-.pub-v { color: var(--steel); font-size: 14.5px; font-style: italic; }
+.pub-v { color: var(--steel); font-size: 14.5px; }
 .pub-empty { color: var(--steel); padding: 24px 0; border-top: 1px solid var(--line); }
 #pub-more { margin-left: 136px; }
 
@@ -484,7 +484,6 @@ html[data-lang="en"] .theme-sub, html[data-lang="en"] .ti-text small { display: 
 .wp { padding: 16px 0; border-bottom: 1px solid var(--line); max-width: 56em; }
 .wp p { margin: 0; }
 .wp .pub-a { margin-top: 2px; }
-.wp .pub-v i { font-style: italic; }
 .wp-group .group-sub { margin-bottom: 4px; }
 #working-panel[hidden], #pub-wrap[hidden] { display: none; }
 @media (max-width: 520px) { .tab { font-size: 16px; padding: 10px 12px 12px; } }
@@ -503,7 +502,6 @@ html[data-lang="en"] .theme-sub, html[data-lang="en"] .ti-text small { display: 
 .alum-links .text-link { font-size: 14.5px; }
 .alum-thesis { margin-top: 6px !important; font-size: 15px; color: var(--ink-2); line-height: 1.6; }
 .alum-thesis > span { color: var(--steel); font-weight: 600; margin-right: 6px; }
-.alum-thesis i { font-style: italic; }
 .alum-career { margin-top: 4px !important; font-size: 15px; color: var(--ink-2); line-height: 1.6; }
 @media (max-width: 520px) { .alum-head { flex-wrap: nowrap; } .alum-links { margin-left: auto !important; white-space: nowrap; } }
 .student-pt { margin-left: 8px; padding: 1px 8px; border-radius: 999px; font-size: 12.5px; font-weight: 700; color: var(--amber-ink); background: #FFE9A6; vertical-align: 1px; }
@@ -555,3 +553,6 @@ html[data-lang="en"] .alum .alum-thesis, html[data-lang="en"] .alum .alum-career
 .alum .alum-thesis > .alum-val { color: var(--ink-2); font-weight: 400; margin-right: 0; white-space: normal; }
 /* 저널 등재 표시(SSCI, Scopus): 저널명 옆 작은 회색 표시 */
 .idx-tag { display: inline-block; margin-left: 6px; padding: 0 6px; border: 1px solid var(--line); border-radius: 4px; font-size: 12px; font-weight: 600; line-height: 1.6; color: var(--steel); vertical-align: 1px; }
+/* 첫 페이지 최근 논문·최근 프로젝트: 연구 분야처럼 제목 아래 굵은 선 */
+.home-list { border-top: 4px solid var(--ink); }
+.home-list li:first-child { border-top: 0; }

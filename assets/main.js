@@ -256,7 +256,7 @@
             <li class="wp">
               <p class="pub-t">${esc(p.t)}</p>
               <p class="pub-a">${esc(p.a)}</p>
-              ${p.v || p.note ? `<p class="pub-v">${p.v ? `<i>${esc(p.v)}</i>` : ""}${p.v && p.note ? " · " : ""}${p.note ? bi(p.note) : ""}</p>` : ""}
+              ${p.v || p.note ? `<p class="pub-v">${p.v ? esc(p.v) : ""}${p.v && p.note ? " · " : ""}${p.note ? bi(p.note) : ""}</p>` : ""}
             </li>`).join("")}
           </ol>
         </section>`;

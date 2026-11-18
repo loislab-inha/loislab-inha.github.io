@@ -54,18 +54,23 @@
 <section class="page-head">
   <div class="wrap">
     <h1><span lang="ko">소식</span><span lang="en">News</span></h1>
-    <p class="page-intro"><span lang="ko">연구실의 논문 게재, 프로젝트, 수상, 학회·행사, 구성원 소식입니다.</span><span lang="en">Publications, projects, awards, conferences and people news from the lab.</span></p>
+    <p class="page-intro"><span lang="ko">연구실의 구성원, 논문 게재, 프로젝트, 수상, 학회·행사 소식입니다.</span><span lang="en">People, publications, projects, awards, conferences and events news from the lab.</span></p>
   </div>
 </section>
 <section class="section section-first">
   <div class="wrap">
     <div class="filters" role="group" aria-label="News filter">
       <button type="button" class="chip is-on" data-news-filter="all" aria-pressed="true"><span lang="ko">전체</span><span lang="en">All</span></button>
+      <button type="button" class="chip" data-news-filter="people" aria-pressed="false"><span lang="ko">구성원</span><span lang="en">People</span></button>
       <button type="button" class="chip" data-news-filter="paper" aria-pressed="false"><span lang="ko">논문 게재</span><span lang="en">Publications</span></button>
       <button type="button" class="chip" data-news-filter="project" aria-pressed="false"><span lang="ko">프로젝트</span><span lang="en">Projects</span></button>
       <button type="button" class="chip" data-news-filter="award" aria-pressed="false"><span lang="ko">수상</span><span lang="en">Awards</span></button>
       <button type="button" class="chip" data-news-filter="event" aria-pressed="false"><span lang="ko">학회·행사</span><span lang="en">Conferences &amp; Events</span></button>
-      <button type="button" class="chip" data-news-filter="people" aria-pressed="false"><span lang="ko">구성원</span><span lang="en">People</span></button>
+    </div>
+    <div class="news-group" id="news-people">
+      <h2 class="group-sub"><span lang="ko">구성원</span><span lang="en">People</span> <span class="group-count" data-news-count="people"></span></h2>
+      <ol class="news-list news-list-full" data-news-cat="people"></ol>
+      <p class="news-empty" data-news-empty="people" hidden><span lang="ko">등록된 구성원 소식이 없습니다.</span><span lang="en">No people news yet.</span></p>
     </div>
     <div class="news-group" id="news-paper">
       <h2 class="group-sub"><span lang="ko">논문 게재</span><span lang="en">Publications</span> <span class="group-count" data-news-count="paper"></span></h2>
@@ -86,11 +91,6 @@
       <h2 class="group-sub"><span lang="ko">학회·행사</span><span lang="en">Conferences &amp; Events</span> <span class="group-count" data-news-count="event"></span></h2>
       <ol class="news-list news-list-full" data-news-cat="event"></ol>
       <p class="news-empty" data-news-empty="event" hidden><span lang="ko">등록된 학회·행사 소식이 없습니다.</span><span lang="en">No conferences &amp; events news yet.</span></p>
-    </div>
-    <div class="news-group" id="news-people">
-      <h2 class="group-sub"><span lang="ko">구성원</span><span lang="en">People</span> <span class="group-count" data-news-count="people"></span></h2>
-      <ol class="news-list news-list-full" data-news-cat="people"></ol>
-      <p class="news-empty" data-news-empty="people" hidden><span lang="ko">등록된 구성원 소식이 없습니다.</span><span lang="en">No people news yet.</span></p>
     </div>
   </div>
 </section>

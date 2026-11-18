@@ -105,12 +105,12 @@
     const info = (m) => `<dl class="student-info">
             <div><dt>${bi({ ko: "연구분야", en: "Research area" })}</dt><dd>${m.topic ? bi(m.topic) : ""}</dd></div>
             <div><dt>${bi({ ko: "이메일", en: "Email" })}</dt><dd>${m.email ? emailLink(m.email) : ""}</dd></div>
-          </dl>${m.scholar ? `<p class="student-links"><a class="text-link" href="${esc(m.scholar)}" target="_blank" rel="noopener">Google Scholar</a></p>` : ""}`;
+          </dl>`;
     const card = (m) => `
       <li class="student">
         <div class="student-photo">${m.photo ? `<img src="${esc(m.photo)}" alt="${esc(m.name.ko)} / ${esc(m.name.en)}" loading="lazy">` : `<span>${esc(initials(m))}</span>`}</div>
         <div class="student-body">
-          <p class="student-name">${bi(m.name)}</p>
+          <div class="student-head"><p class="student-name">${bi(m.name)}</p>${m.scholar ? `<a class="text-link student-scholar" href="${esc(m.scholar)}" target="_blank" rel="noopener">Google Scholar</a>` : ""}</div>
           <p class="student-role">${bi(m.degree === "phd" ? { ko: "박사과정", en: "Ph.D. student" } : { ko: "석사과정", en: "M.S. student" })}${m.parttime ? `<span class="student-pt">${bi({ ko: "파트타임", en: "Part-time" })}</span>` : ""}${m.since ? `<span class="student-since">${bi({ ko: `${m.since}년 입학`, en: `since ${m.since}` })}</span>` : ""}</p>
           ${m.affiliation ? `<p class="student-aff">${m.affiliationUrl ? `<a href="${esc(m.affiliationUrl)}" target="_blank" rel="noopener">${bi(m.affiliation)}</a>` : bi(m.affiliation)}</p>` : ""}
           ${info(m)}

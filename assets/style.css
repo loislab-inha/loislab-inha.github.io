@@ -556,3 +556,7 @@ html[data-lang="en"] .alum .alum-thesis, html[data-lang="en"] .alum .alum-career
 /* 첫 페이지 최근 논문·최근 프로젝트: 연구 분야처럼 제목 아래 굵은 선 */
 .home-list { border-top: 4px solid var(--ink); }
 .home-list li:first-child { border-top: 0; }
+/* 학생 카드: Google Scholar를 이름 줄 오른쪽 끝에 배치 */
+.student-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.student-head .student-name { margin: 0; }
+.student-scholar { font-size: 14.5px; white-space: nowrap; }

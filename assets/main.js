@@ -142,6 +142,7 @@
             ${links ? `<p class="alum-links">${links}</p>` : ""}
           </div>
           ${m.thesis ? `<p class="alum-thesis">${bi({ ko: "학위논문", en: "Thesis" })} <span class="alum-val">${typeof m.thesis === "string" ? esc(m.thesis) : bi(m.thesis)}</span></p>` : ""}
+          ${m.degreeAfter ? `<p class="alum-career">${bi({ ko: "학위", en: "Degree" })} ${bi(m.degreeAfter)}</p>` : ""}
           ${m.current ? `<p class="alum-career">${bi({ ko: "현재", en: "Current" })} ${bi(m.current)}</p>` : ""}
           ${m.history ? `<p class="alum-career">${bi({ ko: "경력", en: "Previously" })} ${bi({ ko: m.history.ko.join(" · "), en: m.history.en.join(" · ") })}</p>` : ""}
           ${m.career ? `<p class="alum-career">${bi(m.career)}</p>` : ""}

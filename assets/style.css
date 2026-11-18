@@ -544,7 +544,7 @@ a[href^="tel:"] { color: inherit; text-decoration: none; cursor: text; }
 }
 /* 졸업생 항목(학위논문·현재·경력): 항목명 칸을 고정해 내용이 같은 위치에서 시작, 줄 간격도 통일 */
 .alum .alum-thesis, .alum .alum-career { display: grid; grid-template-columns: 60px 1fr; align-items: baseline; column-gap: 12px; margin-top: 6px !important; }
-html[data-lang="en"] .alum .alum-thesis, html[data-lang="en"] .alum .alum-career { grid-template-columns: 82px 1fr; }
+html[data-lang="en"] .alum .alum-thesis, html[data-lang="en"] .alum .alum-career { grid-template-columns: 112px 1fr; }
 .alum .alum-thesis > span, .alum .alum-career > span:nth-of-type(-n+2) { white-space: nowrap; }
 .alum .alum-thesis > span, .alum .alum-career > span:nth-of-type(-n+2) { margin-right: 0; }
 /* 학생 수·논문 수 등 개수 표시는 하지 않음 */

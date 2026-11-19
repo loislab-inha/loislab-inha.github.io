@@ -578,3 +578,7 @@ html[data-lang="en"] .alum .alum-thesis, html[data-lang="en"] .alum .alum-career
   .section .group-title { font-size: 27px; }
   .section .group-sub { font-size: 20px; }
 }
+/* 첫 페이지 연구 분야 3개 제목 글자 키움 */
+.ti-text strong { font-size: 20px; word-break: keep-all; }
+.ti-text small { font-size: 14.5px; }
+.nw { white-space: nowrap; }

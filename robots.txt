@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://loislab-inha.github.io/sitemap.xml

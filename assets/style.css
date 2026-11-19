@@ -560,3 +560,21 @@ html[data-lang="en"] .alum .alum-thesis, html[data-lang="en"] .alum .alum-career
 .student-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
 .student-head .student-name { margin: 0; }
 .student-scholar { font-size: 14.5px; white-space: nowrap; }
+/* 졸업생 글자 크기: PC에서는 조금 작게, 스마트폰에서는 조금 크게 */
+.alum .alum-name { font-size: 17px; }
+.alum .alum-meta { font-size: 14px; }
+.alum .alum-thesis, .alum .alum-career { font-size: 14.5px; }
+@media (max-width: 720px) {
+  .alum .alum-name { font-size: 18.5px; }
+  .alum .alum-meta { font-size: 15px; }
+  .alum .alum-thesis, .alum .alum-career { font-size: 16px; }
+  /* 스마트폰에서 '박사 졸업·석사 졸업'이 '졸업생' 제목보다 커 보이지 않도록 */
+  #alumni .group-sub { font-size: 20px; }
+  .alum .alum-thesis, .alum .alum-career { grid-template-columns: 68px 1fr; }
+  html[data-lang="en"] .alum .alum-thesis, html[data-lang="en"] .alum .alum-career { grid-template-columns: 122px 1fr; }
+}
+/* 스마트폰: 큰 제목(교수·졸업생)이 작은 제목(박사과정·박사 졸업 등)보다 분명히 크게 */
+@media (max-width: 720px) {
+  .section .group-title { font-size: 27px; }
+  .section .group-sub { font-size: 20px; }
+}

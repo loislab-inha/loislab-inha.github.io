@@ -330,7 +330,7 @@ const ALUMNI = [
               en: "A Comparative Analysis on Logistics Center Characteristics of Military Echelon and Retail Type: With DEA Approach" },
     current: { ko: "육군 중령", en: "Lieutenant Colonel, Republic of Korea Army" },
     history: { ko: ["합동참모본부", "국군수송사령부", "지상작전사령부"],
-               en: ["Joint Chiefs of Staff", "Armed Forces Transportation Command", "Ground Operations Command"] } },
+               en: ["Joint Chiefs of Staff", "ROK Transportation Command", "Ground Operations Command"] } },
 
   { degree: "ms", year: 2026, name: { ko: "Hangyu Mei", en: "Hangyu Mei" },
     thesis: { ko: "A Simulation-Assisted Optimization Framework for Human-Robot Synergistic Last-Mile Delivery in High-Rise Buildings",
@@ -361,7 +361,7 @@ const ALUMNI = [
   { degree: "ms", year: 2017, name: { ko: "권오성", en: "Oh-Seong Kweon" },
     thesis: { ko: "로드밸런싱을 고려한 전기차 충전소 입지선정에 관한 연구",
               en: "Locating Electric Vehicle Charging Stations for Load Balancing" },
-    current: { ko: "CJ대한통운 W&D Senior Analyst", en: "Senior Analyst, W&D, CJ Logistics" } },
+    current: { ko: "CJ대한통운 경영진단담당 책임", en: "Senior Manager, Business Audit Department, CJ Logistics" } },
   { degree: "ms", year: 2017, name: { ko: "이경연", en: "Kyung-Yeon Lee" },
     thesis: { ko: "드론 활용 혈액 수송시스템 분석에 관한 연구", en: "Analyzing a Drone Transport System for Blood" },
     current: { ko: "COSRX SCP(Supply Chain Planning)팀 팀장", en: "Team Lead, Supply Chain Planning Team, COSRX" } },

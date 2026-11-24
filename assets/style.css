@@ -589,3 +589,5 @@ html[data-lang="en"] .alum .alum-thesis, html[data-lang="en"] .alum .alum-career
 }
 /* 첫 화면 제목: 각 줄 첫 글자(L·O·I·S)를 황금색(로고 노랑과 진한 황금의 25% 지점)으로 강조 */
 .hero h1 .lois-cap { color: #E8A800; }
+/* 푸터: 공식 주소(lois.inha.ac.kr) 표시 */
+.foot .foot-url { margin: 2px 0 10px; font-weight: 600; color: var(--amber); letter-spacing: .01em; }

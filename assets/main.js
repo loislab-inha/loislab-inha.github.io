@@ -20,7 +20,14 @@
   function getSaved() { try { return localStorage.getItem("lois-lang"); } catch (e) { return null; } }
   function save(l) { try { localStorage.setItem("lois-lang", l); } catch (e) {} }
   const params = new URLSearchParams(location.search);
-  let lang = params.get("lang") || getSaved() || "ko";
+  // 처음 방문: 브라우저 언어가 한국어면 한글, 그 외(해외 방문자)는 영어로 시작.
+  // 주소의 ?lang= 이나 방문자가 직접 고른 언어(저장값)가 있으면 그것을 우선함.
+  const browserLang = () => {
+    const langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "ko"]);
+    return String(langs[0] || "ko").toLowerCase().startsWith("ko") ? "ko" : "en";
+  };
+  let lang = params.get("lang") || getSaved() || browserLang();
+  if (lang !== "ko" && lang !== "en") lang = "ko";
   if (lang !== "ko" && lang !== "en") lang = "ko";
 
   const baseTitle = document.title;

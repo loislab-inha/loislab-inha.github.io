@@ -250,6 +250,17 @@
       if (focus) (isWork ? tabWork : tabPub).focus();
       history.replaceState(null, "", isWork ? "#working" : location.pathname + location.search);
     };
+    // 논문 제목의 시작 위치를 '진행 중 논문' 탭 글자의 왼쪽 끝에 맞춤 (언어·화면 폭이 바뀌어도 다시 계산)
+    const alignTitles = () => {
+      const sp = [...tabWork.querySelectorAll("span")].find((x) => x.offsetParent) || tabWork;
+      const box = tabWork.closest(".tabs") || tabWork.parentElement;
+      const x = Math.round(sp.getBoundingClientRect().left - box.getBoundingClientRect().left);
+      if (x > 40) document.documentElement.style.setProperty("--pub-indent", x + "px");
+    };
+    alignTitles();
+    window.addEventListener("resize", alignTitles);
+    document.querySelectorAll(".lang-toggle, [data-set-lang]").forEach((b) => b.addEventListener("click", () => setTimeout(alignTitles, 0)));
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(alignTitles);
     tabPub.addEventListener("click", () => select("published"));
     tabWork.addEventListener("click", () => select("working"));
     [tabPub, tabWork].forEach((t) => t.addEventListener("keydown", (e) => {
